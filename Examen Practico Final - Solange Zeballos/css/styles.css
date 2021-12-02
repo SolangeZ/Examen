@@ -4,9 +4,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+    text-decoration: none;
 }
-/*COLORS*/
+/*VAR COLORS*/
 :root {
     --primary-color-rojoBrillante: rgb(242, 95, 58);
     --primary-color-rojoSuave: rgb(249, 143, 117);
@@ -37,19 +37,23 @@ h1, h2,h3,h4 {
 /*HEADER*/
 
 
+
+
 header {
     display: flex;
     padding: 5%;
     margin:5%;
-    justify-content: space-between;
+    align-items: center;
+justify-content: space-between;
 }
-
-header div {
+.navbar ul{
     width: 100%;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    text-decoration: none;
+    
+}
+.botonheader{
+    display: flex;
+    ;
 }
 .icono-visible{
     display: flex;
@@ -59,7 +63,6 @@ header div {
 /*.navbar {
     display: none;
 */
-
 .navbar ul{
     display: flex;
     align-items: center;
@@ -89,15 +92,15 @@ button {
     display: flex;
     /*flex-direction: column;*/
 width: 100%;
+order:2;
 }
 
 .caja1 {
     color: var(--primary-color-azulOscuro);
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 50px;
     
-   
+justify-content: center;
 }
 h1{
     font-size: 30px;
@@ -111,11 +114,13 @@ display: flex;
 flex-wrap: wrap;
 font-size: 15px;
 line-height: 1.6;
-padding: 5px 2px;
+gap:10px;
+align-items: center;
 
 }
-
-
+.boton1 {
+    padding-left: 50px;
+}
 
 /* CAJA2*/
 
@@ -123,7 +128,7 @@ padding: 5px 2px;
     display:flex;
     font-size: 15px;
     line-height: 1.6;
-    padding-bottom: 8%;
+    padding-bottom: 5%;
 }
 
 .left2 {
@@ -152,10 +157,7 @@ padding: 5px 2px;
 
 /*CAJA3*/
 
-.caja3 {
-    display: flex;
-    flex-direction: column;
-}
+
 .caja3 h2 {
     font-size: 30px;
     font-weight: bold;
@@ -164,13 +166,11 @@ padding: 5px 2px;
 .articulos {
     display: flex;
     flex-direction: column;
- 
     gap:20px;
-    padding-bottom: 45px;
+    padding:10px 10px 45px;
+    margin: 20px;
 }
-article{
-    position: relative;
-}
+
 article img {
     width: 130px;
     display: flex;
@@ -204,6 +204,13 @@ letter-spacing: -0.01em;
         flex-direction: column;
         align-items: center;
 }
+.boton3{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    color: var(--primary-color-blanco)
+    
+}
 
 /*CAJA4*/
 
@@ -214,21 +221,24 @@ letter-spacing: -0.01em;
     justify-content:space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 40px ;
+    padding-top: 30px ;
     font-size: 35px;
     text-align: center;
 }
 
-.publicidad h2 {
-    font-size: 45px;
+.publicidad h3 {
+    font-size: 40px;
     font-weight: 500;
     color: #FFFFFF;
     text-align: center;
+    padding: 10px;
+    margin: 20px;
 }
 
 .publicidad button {
     color: var(--primary-color-rojoBrillante);
     background: var(--primary-color-blanco);
+
 }
 
 /*FOOTER*/
@@ -245,9 +255,19 @@ footer{
 
 footer a{
     color: #FFFFFF;
-    text-decoration: none;;
+    text-decoration: none;
 }
-
+.listas{
+display: flex;
+justify-content: space-between;
+padding: 38px;
+}
+.logos{
+    display: flex;
+    width: 450px;
+    justify-content: center;
+    gap:40px;
+}
 .formulario {
     background-color: #FFFFFF;
     border: 0;
@@ -255,11 +275,15 @@ footer a{
     padding: 13px 48px 10px;
     
 }
+footer span {
+    color: var(--neutral-color-grisClaro);
+}
 input {
     background-color: #F3603B;
     border-radius: 50px;
     color: #FFFFFF;
-    padding: 11px 22px;
+    padding: 10px 22px;
+    border: 0;
 } 
 
 @media screen and (min-width: 375px) {
@@ -269,7 +293,24 @@ input {
      .navbar{
         display: flex;
     }
-  
+    .texto{
+        padding-top: 100px;
+        flex-direction: column;
+        margin: 0 50px;
+    }
+    
+    
+    .caja1 p {
+        text-align: left;
+        width: 405px;
+    }
+    .img-porcentaje{
+        order:1;
+    }
+   .articulos{
+      display: flex;
+      flex-direction: row;
+    }
      
 }
 @media screen and  (max-width: 1439px){
@@ -279,14 +320,25 @@ input {
     header .navbar{
         display: none;
     }
-  
+    .img-porcentaje{
+display: flex;
+
+        
+    }
+    .caja1{
+        flex-wrap: nowrap;
+    }
    .caja2 {
         display: flex;
         flex-direction: column;
     }
-  .articulos{
-      display: flex;
-    
-  }
+    .articulos{
+        display: flex;
+        flex-direction: column;
+      }
+
+    .botonheader{
+        display: none;
+    }
 }
 
